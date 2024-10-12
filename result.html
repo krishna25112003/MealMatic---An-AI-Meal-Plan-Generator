@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Meal Plan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Generated Meal Plan</h1>
+    </header>
+    <main>
+        <div class="meal-plan">
+            <h2>Meal Plan for {{ name }}</h2>
+            <h3>Day Meal Plan:</h3>
+            <div class="meal-details">
+                <pre>{{ result }}</pre>
+            </div>
+            <button onclick="window.location.href='/generate'">Generate Another Meal Plan</button>
+        </div>
+    </main>
+</body>
+</html>

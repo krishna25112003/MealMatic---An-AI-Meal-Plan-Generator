@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to MealMatic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        .header-section {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('{{ url_for("static", filename="images/EW-Group-Meal-Plans-Day-06-3x2-d8909c6f293a4464917cdb35e443bb88.jpg") }}');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top custom-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="#">MealMatic</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-primary text-white" href="/generate">Get Started</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Header Section -->
+<header class="header-section">
+    <div class="welcome-text animate__animated animate__fadeInDown">
+        <h1>Welcome to MealMatic</h1>
+        <p class="lead animate__animated animate__fadeIn animate__delay-1s">Your personalized meal planner for a healthier lifestyle</p>
+        <a href="/generate" class="btn btn-light btn-lg animate__animated animate__fadeIn animate__delay-2s">Get Started</a>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 mb-4 animate__animated animate__fadeInLeft">
+            <h2 id="about">About MealMatic</h2>
+            <p>MealMatic is your go-to platform for creating customized meal plans tailored to your dietary preferences, height, weight, and age. Whether you aim to lose weight, maintain a healthy lifestyle, or simply want to eat better, MealMatic helps you achieve your goals with balanced meal options.</p>
+            <p>Our meal plans focus on nutrient-dense, low-calorie foods to ensure you get the necessary vitamins and minerals while enjoying delicious dishes. Say goodbye to unhealthy eating habits and hello to a brighter, healthier future!</p>
+        </div>
+        <div class="col-lg-6 mb-4 animate__animated animate__fadeInRight">
+            <img src="{{ url_for('static', filename='images/14-days-clean-eating-meal-plan-1200-lede-601736337d914519bb5bf8eb83540da1.jpg') }}" class="img-fluid rounded" alt="Healthy Meals">
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-lg-6 mb-4 animate__animated animate__fadeInLeft">
+            <img src="{{ url_for('static', filename='images/istockphoto-876656394-612x612.jpg') }}" class="img-fluid rounded" alt="Healthy Eating">
+        </div>
+        <div class="col-lg-6 mb-4 animate__animated animate__fadeInRight">
+            <h2>Why Choose Us?</h2>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-check-circle"></i> Personalized meal plans based on individual needs</li>
+                <li><i class="fas fa-check-circle"></i> Focus on balanced, healthy options</li>
+                <li><i class="fas fa-check-circle"></i> Easy-to-follow recipes and nutritional information</li>
+                <li><i class="fas fa-check-circle"></i> Support for various dietary preferences: vegetarian, vegan, and more</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-12 animate__animated animate__fadeInUp">
+            <h2>How It Works</h2>
+            <p>Our simple process allows you to get the meal plans you need with just a few clicks:</p>
+            <ol>
+                <li><strong>Input Your Details:</strong> Enter your name, age, height, weight, and dietary preferences.</li>
+                <li><strong>Get Your Plan:</strong> Receive a customized meal plan created just for you.</li>
+                <li><strong>Enjoy Your Meals:</strong> Follow the meal plan to achieve your health goals.</li>
+            </ol>
+            <p>It's that easy! Let us help you embark on your journey to better health.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <h2 class="text-center">Streamline Your Meal Planning</h2>
+    <p class="text-center">Discover personalized meal plans, achieve your health goals, and simplify your grocery shopping. Start your journey to a healthier lifestyle today!</p>
+    <div class="row mt-4">
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card border-light shadow-sm" style="border-radius: 10px;">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Create Custom Meal Plans</h3>
+                    <p class="card-text">MealMatic uses advanced algorithms to generate meal plans tailored to your unique dietary preferences, age, height, and weight.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card border-light shadow-sm" style="border-radius: 10px;">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Effortless Meal Planning</h3>
+                    <p class="card-text">Plan your meals easily with our user-friendly interface. Get organized weekly plans that fit your lifestyle, ensuring you stay on track.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card border-light shadow-sm" style="border-radius: 10px;">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Save & Share Your Favorites</h3>
+                    <p class="card-text">Easily save your preferred recipes and meal plans. Share them with family and friends to inspire healthy eating together.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card border-light shadow-sm" style="border-radius: 10px;">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Shop with Convenience</h3>
+                    <p class="card-text">Receive a comprehensive shopping list tailored to your meal plan. Order directly from your favorite grocery stores without the hassle.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-primary text-white text-center p-3 mt-5">
+    <p>&copy; 2024 MealMatic. All rights reserved.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

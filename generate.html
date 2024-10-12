@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Meal Plan</title>
+    <link rel="stylesheet" href="/static/generate.css">
+</head>
+<body>
+    <header>
+        <h1>Generate Your Meal Plan</h1>
+    </header>
+    <div class="container">
+        <form method="POST">
+            <div class="input-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" name="height" required>
+            </div>
+            <div class="input-group">
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" required>
+            </div>
+            <div class="input-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="input-group">
+                <label for="preference">Dietary Preference:</label>
+                <select id="preference" name="preference" required>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="non-vegetarian">Non-Vegetarian</option>
+                    <option value="jain">Jain</option>
+                    <option value="vegan">Vegan</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="cuisine">Preferred Cuisine:</label>
+                <select id="cuisine" name="cuisine" required>
+                    <option value="Italian">Italian</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="South Indian">South Indian</option>
+                    <option value="North Indian">North Indian</option>
+                    <option value="Mexican">Mexican</option>
+                    <option value="Thai">Thai</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-button">Generate Meal Plan</button>
+        </form>
+    </div>
+</body>
+</html>
+
